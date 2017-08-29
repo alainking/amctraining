@@ -27,13 +27,7 @@
 					"request": {
 						"url": "http://localhost:11000/api/v1/values/4",
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer",
-								"description": ""
-							}
-						],
+						"header": [],
 						"body": {},
 						"description": ""
 					},
@@ -89,6 +83,85 @@
 							"mode": "raw",
 							"raw": ""
 						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"description": "",
+			"item": [
+				{
+					"name": "Products Get",
+					"request": {
+						"url": "http://localhost:11000/api/v1/products",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Products Get By Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/products/5",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Products Post",
+					"request": {
+						"url": "http://localhost:11000/api/v1/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"code\": \"cpui3\",\n    \"description\": \"CPU - i3\",\n    \"createUser\": \"Postman\",\n    \"createDate\": \"2017-08-29\",\n    \"editUser\": \"\",\n    \"editDate\": \"2017-08-29\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Products Put By Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/products/15",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 15,\n    \"code\": \"cpui3\",\n    \"description\": \"Edit\",\n    \"createUser\": \"Postman\",\n    \"createDate\": \"2017-08-29T14:45:20.16\",\n    \"editUser\": \"Edit\",\n    \"editDate\": \"2017-08-29T14:45:20.16\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Products Delete By Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/products/15",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
 						"description": ""
 					},
 					"response": []

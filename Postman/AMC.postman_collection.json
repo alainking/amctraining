@@ -1,0 +1,99 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AMC",
+		"_postman_id": "fa0dd093-35ee-f578-a42b-6a212ed723a8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Values",
+			"description": "",
+			"item": [
+				{
+					"name": "Values Get",
+					"request": {
+						"url": "http://localhost:11000/api/v1/values",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Values Get By Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/values/4",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Values Post",
+					"request": {
+						"url": "http://localhost:11000/api/v1/values",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Bob"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Values Put by Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/values/4",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Bob Jones"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Values Delete by Id",
+					"request": {
+						"url": "http://localhost:11000/api/v1/values/4",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

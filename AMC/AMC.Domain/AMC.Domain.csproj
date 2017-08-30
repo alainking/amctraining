@@ -48,6 +48,9 @@
     <Compile Include="ProductsApi.cs" />
     <Compile Include="ProductsRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SuppliersApi.cs" />
+    <Compile Include="SuppliersRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

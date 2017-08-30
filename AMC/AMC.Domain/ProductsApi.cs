@@ -27,6 +27,12 @@ namespace AMC.Domain
       return product;
     }
 
+    public async Task<Product> FindByCodeAsync(string code)
+    {
+      var product = await _productsRepo.FindByCodeAsync(code);
+      return product;
+    }
+
     public async Task<int> AddAsync(Product product)
     {
       var productId = await _productsRepo.AddAsync(product);

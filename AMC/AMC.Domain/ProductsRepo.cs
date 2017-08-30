@@ -38,6 +38,17 @@ namespace AMC.Domain
       }
     }
 
+    internal async Task<Product> FindByCodeAsync(string code)
+    {
+      var parms = new { Code = code };
+      using (var conn = new SqlConnection(_connectionString))
+      {
+        await conn.OpenAsync();
+        var products = await conn.QueryAsync<Product>("rsp_Products_FindByCode", parms, commandType: CommandType.StoredProcedure);
+        return products.FirstOrDefault();
+      }
+    }
+
     internal async Task<bool> DeleteAsync(int id)
     {
       var parms = new { ID = id };

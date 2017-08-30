@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using Swashbuckle.Application;
+using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 
@@ -44,7 +45,11 @@ namespace AMC.WebApi
 
       //Swashbuckle Configuration
       httpConfiguration
-        .EnableSwagger(c => c.SingleApiVersion("v1", "AMC Web API"))
+        .EnableSwagger(c =>
+        {
+          c.SingleApiVersion("v1", "AMC Web API");
+          c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+        })
         .EnableSwaggerUi();
 
       return httpConfiguration;
